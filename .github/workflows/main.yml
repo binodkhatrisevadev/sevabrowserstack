@@ -12,3 +12,15 @@ jobs:
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
           build-name: 'BUILD_INFO'
           project-name: 'REPO_NAME'
+          
+      - name: 'Checkout the repository'
+        uses:  actions/checkout@v2       
+        
+      - name: 'Clean install'
+        run:   mvn clean install -DskipTests
+
+      - name: 'Building web application to be tested'
+        run:   mvn compile             
+
+      - name: 'Running application under test'
+        run:   mvn test -P sample-test
