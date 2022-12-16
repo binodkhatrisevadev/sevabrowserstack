@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BStackDemoTest extends SeleniumTest {
-    @Test
+    @Test(description = "Demo testcases for Browserstack"
     public void addToCart() throws Exception {
         // navigate to bstackdemo
         driver.get("https://www.bstackdemo.com");
