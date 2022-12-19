@@ -1,12 +1,14 @@
 package com.browserstack;
 
 import com.browserstack.SeleniumTest;
+import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BStackDemoTest extends SeleniumTest {
     @Test
+    @DisplayName("BrowserStack DemoWebsite Test")
     public void addToCart() throws Exception {
         // navigate to bstackdemo
         driver.get("https://www.bstackdemo.com");
